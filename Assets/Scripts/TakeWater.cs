@@ -6,6 +6,8 @@ public class TakeWater : MonoBehaviour
 {
     public GameObject water;
     public float timer;
+    public GameObject freeBottle;
+    public static bool fullness = false;
     
     
 
@@ -26,10 +28,22 @@ public class TakeWater : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && timer > 0)
+        Drink();
+        if (Input.GetKeyDown(KeyCode.E) && timer > 0)
         {
             water.SetActive(true);
+            freeBottle.SetActive(false);
+            fullness = true;
         }
     }
-    
+    public void Drink()
+    {
+        if (Input.GetKeyDown(KeyCode.F) && fullness)
+        {
+            fullness = false;
+            freeBottle.SetActive(true);
+            water.SetActive(false);
+        }
+    }
+
 }
