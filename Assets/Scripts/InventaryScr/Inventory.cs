@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
+    
     private Canvas canvas;
     private bool inv = false;
     void Start()
@@ -27,9 +28,17 @@ public class Inventory : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.I) && inv)
         {
-            canvas.enabled = false ;
+            canvas.enabled = false;
             inv = false;
             StartCoroutine(TimeToInv());
+        }
+    }
+    public void CloseButton()
+    {
+        if (Input.GetMouseButtonDown(0) && inv)
+        {
+            canvas.enabled = false;
+            inv = false;
         }
     }
    

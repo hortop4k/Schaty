@@ -5,7 +5,9 @@ using UnityEngine;
 public class MIneralsExtraction : MonoBehaviour
 {
     public float TimeToDestroy;
-    private GameObject MinPrefab;
+    public GameObject MinPrefab;
+    public static bool Destr;
+    
     void Start()
     {
         
@@ -21,11 +23,14 @@ public class MIneralsExtraction : MonoBehaviour
         {
             if (Input.GetMouseButton(0))
             {
+                MinPrefab = hit.collider.gameObject;
                 TimeToDestroy += Time.deltaTime;
                 if (TimeToDestroy >= 5)
                 {
-                    MinPrefab = GameObject.FindGameObjectWithTag("Minerals");
+                    //MinPrefab = GameObject.FindGameObjectWithTag("Minerals");
+                    
                     Destroy(MinPrefab);
+                    Destr = true;
                 }
             }
             else

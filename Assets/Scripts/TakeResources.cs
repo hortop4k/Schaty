@@ -27,6 +27,8 @@ public class TakeResources : MonoBehaviour
         {
             col = true;
             res = GameObject.FindGameObjectWithTag("Resources");
+            
+            
         }
     }
     private void OnTriggerExit(Collider other)
