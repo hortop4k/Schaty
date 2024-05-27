@@ -8,7 +8,7 @@ public class MIneralsExtraction : MonoBehaviour
     public float TimeToDestroy;
     [SerializeField] private GameObject MinPrefab;
     public static bool Destr;
-    private InvForPlayer inventory;
+    
     
 
     void Start()
@@ -39,7 +39,7 @@ public class MIneralsExtraction : MonoBehaviour
                     if (iconic != null )
                     {
                         iconic.GetIcon();
-                        Destroy(MinPrefab);
+                        //Destroy(MinPrefab);
                         Destr = true;
                     }
                     

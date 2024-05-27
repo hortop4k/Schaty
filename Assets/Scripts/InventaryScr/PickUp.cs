@@ -10,8 +10,21 @@ public class PickUp : MonoBehaviour, IPickUpable
     public GameObject GetIcon()
     {
         Debug.Log("hELLO");
-        return image;
+        //return image;
         //Destroy(this.gameObject);
+        for (int i = 0; i < inventory.slots.Length; i++)
+        {
+            if (inventory.isFull[i] == false)
+            {
+
+                inventory.isFull[i] = true;
+                Instantiate(image, inventory.slots[i].transform);
+                Destroy(gameObject);
+                break;
+            }
+
+        }
+        return image;
     }
 
     private void Start()
@@ -23,39 +36,39 @@ public class PickUp : MonoBehaviour, IPickUpable
     public void Update()
     {
 
-        if (MIneralsExtraction.Destr)
-        {
-            for (int i = 0; i < inventory.slots.Length; i++)
-            {
-                if (inventory.isFull[i] == false)
-                {
+        //if (MIneralsExtraction.Destr)
+        //{
+        //    for (int i = 0; i < inventory.slots.Length; i++)
+        //    {
+        //        if (inventory.isFull[i] == false)
+        //        {
                     
-                    inventory.isFull[i] = true;
-                    Instantiate(image, inventory.slots[i].transform);
-                    //Destroy(gameObject);
-                    MIneralsExtraction.Destr = false;
-                    break;
-                }
-            }
-        }
+        //            inventory.isFull[i] = true;
+        //            Instantiate(image, inventory.slots[i].transform);
+        //            //Destroy(gameObject);
+        //            MIneralsExtraction.Destr = false;
+        //            break;
+        //        }
+        //    }
+        //}
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Player")
-        {
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.tag == "Player")
+    //    {
 
-            for (int i = 0; i < inventory.slots.Length; i++)
-            {
-                if (inventory.isFull[i] == false)
-                {
+    //        for (int i = 0; i < inventory.slots.Length; i++)
+    //        {
+    //            if (inventory.isFull[i] == false)
+    //            {
 
-                    inventory.isFull[i] = true;
-                   // Instantiate(icon, inventory.slots[i].transform);
-                    Destroy(gameObject);
-                    break;
-                }
-            }
-        }
-    }
+    //                inventory.isFull[i] = true;
+    //                Instantiate(image, inventory.slots[i].transform);
+    //                Destroy(gameObject);
+    //                break;
+    //            }
+    //        }
+    //    }
+    //}
 
 }
