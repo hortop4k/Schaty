@@ -2,28 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PickUp : MonoBehaviour
+public class PickUp : MonoBehaviour, IPickUpable
 {
     private InvForPlayer inventory;
-    public GameObject icon;
-    
+    public GameObject image;
+
+    public GameObject GetIcon()
+    {
+        Debug.Log("hELLO");
+        return image;
+        //Destroy(this.gameObject);
+    }
 
     private void Start()
     {
+        
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<InvForPlayer>();
     }
 
     public void Update()
     {
-       
+
         if (MIneralsExtraction.Destr)
         {
             for (int i = 0; i < inventory.slots.Length; i++)
             {
                 if (inventory.isFull[i] == false)
                 {
+                    
                     inventory.isFull[i] = true;
-                    Instantiate(icon, inventory.slots[i].transform);
+                    Instantiate(image, inventory.slots[i].transform);
                     //Destroy(gameObject);
                     MIneralsExtraction.Destr = false;
                     break;
@@ -33,15 +41,16 @@ public class PickUp : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player")
+        if (other.tag == "Player")
         {
-            
+
             for (int i = 0; i < inventory.slots.Length; i++)
             {
                 if (inventory.isFull[i] == false)
                 {
+
                     inventory.isFull[i] = true;
-                    Instantiate(icon, inventory.slots[i].transform);
+                   // Instantiate(icon, inventory.slots[i].transform);
                     Destroy(gameObject);
                     break;
                 }

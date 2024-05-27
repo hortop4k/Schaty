@@ -26,8 +26,8 @@ public class TakeResources : MonoBehaviour
         if (other.gameObject.tag == "Resources")
         {
             col = true;
-            res = GameObject.FindGameObjectWithTag("Resources");
-            
+            //res = GameObject.FindGameObjectWithTag("Resources");
+            res = other.gameObject;
             
         }
     }

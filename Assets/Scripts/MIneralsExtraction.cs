@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class MIneralsExtraction : MonoBehaviour
 {
     public float TimeToDestroy;
-    public GameObject MinPrefab;
+    [SerializeField] private GameObject MinPrefab;
     public static bool Destr;
+    private InvForPlayer inventory;
     
+
     void Start()
     {
         
@@ -23,14 +26,24 @@ public class MIneralsExtraction : MonoBehaviour
         {
             if (Input.GetMouseButton(0))
             {
+
                 MinPrefab = hit.collider.gameObject;
+                //MinPrefab = MonoBehaviour as IPickUpable; 
+                
+
                 TimeToDestroy += Time.deltaTime;
                 if (TimeToDestroy >= 5)
                 {
+                    var iconic = hit.collider.gameObject.GetComponent<IPickUpable>();
                     //MinPrefab = GameObject.FindGameObjectWithTag("Minerals");
+                    if (iconic != null )
+                    {
+                        iconic.GetIcon();
+                        Destroy(MinPrefab);
+                        Destr = true;
+                    }
                     
-                    Destroy(MinPrefab);
-                    Destr = true;
+                    
                 }
             }
             else
@@ -45,5 +58,9 @@ public class MIneralsExtraction : MonoBehaviour
         {
             TimeToDestroy = 0;
         }
+        
+
     }
+
+   
 }
