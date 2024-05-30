@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
+using TMPro;
 using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class MIneralsExtraction : MonoBehaviour
@@ -8,12 +11,19 @@ public class MIneralsExtraction : MonoBehaviour
     public float TimeToDestroy;
     [SerializeField] private GameObject MinPrefab;
     public static bool Destr;
-    
-    
+    private InvForPlayer inventory;
+    [SerializeField] private int[] count = new int[] {0};
+    public TMP_Text[] countText;
+    public GameObject[] Texting;
+    public int number;
+    public GameObject massiveInvent;
+    public GameObject kirka;
+
+
 
     void Start()
     {
-        
+        inventory = GetComponent<InvForPlayer>();
     }
 
     
@@ -22,25 +32,28 @@ public class MIneralsExtraction : MonoBehaviour
         //Cursor.lockState = CursorLockMode.Locked;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-        if(Physics.Raycast(ray, out hit, 20) && hit.collider.tag == "Minerals")
+        if(Physics.Raycast(ray, out hit, 20) && hit.collider.tag == "Minerals" && TakeTools.toolInHand)
         {
             if (Input.GetMouseButton(0))
             {
 
                 MinPrefab = hit.collider.gameObject;
-                //MinPrefab = MonoBehaviour as IPickUpable; 
+                  
                 
 
                 TimeToDestroy += Time.deltaTime;
-                if (TimeToDestroy >= 5)
+                if (TimeToDestroy >= 3)
                 {
                     var iconic = hit.collider.gameObject.GetComponent<IPickUpable>();
-                    //MinPrefab = GameObject.FindGameObjectWithTag("Minerals");
-                    if (iconic != null )
+                    
+                    if (iconic != null)
                     {
                         iconic.GetIcon();
-                        //Destroy(MinPrefab);
                         Destr = true;
+                        
+                            InventStack();
+                            
+                        
                     }
                     
                     
@@ -61,6 +74,29 @@ public class MIneralsExtraction : MonoBehaviour
         
 
     }
+    public void InventStack()
+    {
+        for (int i = 0; i < inventory.slots.Length; i++)
+        {
 
-   
+            if (inventory.slots[i] == PickUp.objectImage)
+            {
+                Debug.Log("plus");
+                Texting[i].SetActive(true);
+                //count[i]++;
+                number = count[i];
+                number++;
+                count[i] = number;
+                countText[i].text = count[i].ToString();
+                break;
+            }
+            else
+            {
+                Debug.Log("Wops");  
+            }
+
+        }
+    }
+
+
 }

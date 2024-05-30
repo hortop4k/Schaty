@@ -1,18 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
     
     private Canvas canvas;
     private bool inv = false;
+    
+    
     void Start()
     {
         canvas = GetComponent<Canvas>();
         canvas.enabled = false;
+        
     }
-
+    
     
     void Update()
     {
@@ -32,6 +37,8 @@ public class Inventory : MonoBehaviour
             inv = false;
             StartCoroutine(TimeToInv());
         }
+        
+        
     }
     public void CloseButton()
     {
@@ -48,4 +55,5 @@ public class Inventory : MonoBehaviour
         yield return new WaitForSeconds(1);
         inv = false;
     }
+    
 }
