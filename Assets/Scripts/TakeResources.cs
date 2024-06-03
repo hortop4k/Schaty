@@ -11,11 +11,14 @@ public class TakeResources : MonoBehaviour
     public GameObject res;
     public Image XPBar;
     private float AddXp = 0.8f;
-    private float OverXp;
+    [SerializeField] private float OverXp;
     public TMP_Text Lvl;
     private float AddLvl = 1;
     private float AboveLvlCount;
     private float SecondOverXp;
+    [SerializeField] private float LimitLvl = 1;
+    [SerializeField] private float per = 1;
+    
 
     private void Start()
     {
@@ -54,16 +57,25 @@ public class TakeResources : MonoBehaviour
         col = false;
         OverXp += AddXp;
         SecondOverXp = OverXp;
-        if (OverXp >= 1)
+        
+        if (OverXp >= LimitLvl)
         {
             OverXp = 0;
-            AboveLvlCount = SecondOverXp - 1;
+            AboveLvlCount = SecondOverXp - per / LimitLvl;
             AddLvl += 1;
             OverXp += AboveLvlCount;
             XPBar.fillAmount = 0;
+            LimitLvl += LimitLvl / 100 * 175;
+            XPBar.fillAmount += OverXp / LimitLvl;
+            Lvl.text = AddLvl.ToString();
         }
-        XPBar.fillAmount += OverXp;
-        Lvl.text = AddLvl.ToString();
+        else
+        {
+            Debug.Log(OverXp / LimitLvl);
+            XPBar.fillAmount = OverXp / LimitLvl;
+            Lvl.text = AddLvl.ToString();
+        }
+        
         yield return new WaitForSeconds(2);
         xp.enabled = false;
         
