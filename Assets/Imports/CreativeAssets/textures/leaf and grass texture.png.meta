@@ -6,7 +6,7 @@ TextureImporter:
   serializedVersion: 12
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -36,13 +36,13 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
+    wrapU: 1
+    wrapV: 1
     wrapW: 0
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -51,9 +51,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -103,18 +103,420 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: leaf and grass texture_0
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 418
+        width: 589
+        height: 565
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbd9d0face3b14849b8bfc4de2261f95
+      internalID: 616754987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf and grass texture_1
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 739
+        width: 224
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 618c7e9aa71819d468d361591292ed65
+      internalID: 1643045963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf and grass texture_6
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 529
+        width: 243
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d80dcd411e5bf9d4e9c80ce3538fb1e5
+      internalID: -1541787253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf and grass texture_8
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 348
+        width: 32
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d805a679cc67cc74bb8a2c31682c8faf
+      internalID: 592382676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf and grass texture_10
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 274
+        width: 385
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9c9e41a042b0fd42b04e0eae69e6353
+      internalID: -1592422353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf and grass texture_11
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 361
+        width: 14
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1695460b333b62f42a1c022bd7747a3d
+      internalID: 845173865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf and grass texture_12
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 326
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b601972e5254c2e4a9192218e2e0a455
+      internalID: -540464938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf and grass texture_13
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 298
+        width: 29
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f15b7f676adf5dc4a9a9695ede4109f1
+      internalID: -928326590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf and grass texture_14
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 306
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb60da7ae4a6b354dae580e9dc776062
+      internalID: 1091519596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf and grass texture_15
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 320
+        width: 31
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52645af3bca2cbf44ad1da4ea1912293
+      internalID: -75977900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf and grass texture_16
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 268
+        width: 22
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66344809125ee3d41bb6152aa7dfb246
+      internalID: 137207344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf and grass texture_17
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 281
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c493d6ccca31fbb47b8f707039eaa1e2
+      internalID: 1250521672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf and grass texture_18
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 265
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7702455d97abc944fbd162cef51f12a3
+      internalID: 1510704814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf and grass texture_19
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 54
+        width: 255
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d8822103cd8fc641a594278abf25c1c
+      internalID: -1565413026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf and grass texture_20
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 237
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc471a1f7bfc83647a65d715475fdc0f
+      internalID: 1393665561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf and grass texture_21
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 25
+        width: 236
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e243c75b08ca9d4ea9123b2e0e25051
+      internalID: -1507303431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf and grass texture_22
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 137
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcf1651152bfb9b4888f67d5f6b75175
+      internalID: -1305787327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf and grass texture_23
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 90
+        width: 118
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cf647a191e29f34a850e14e60d928e8
+      internalID: -824239988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      leaf and grass texture_0: 616754987
+      leaf and grass texture_1: 1643045963
+      leaf and grass texture_10: -1592422353
+      leaf and grass texture_11: 845173865
+      leaf and grass texture_12: -540464938
+      leaf and grass texture_13: -928326590
+      leaf and grass texture_14: 1091519596
+      leaf and grass texture_15: -75977900
+      leaf and grass texture_16: 137207344
+      leaf and grass texture_17: 1250521672
+      leaf and grass texture_18: 1510704814
+      leaf and grass texture_19: -1565413026
+      leaf and grass texture_2: -1156612645
+      leaf and grass texture_20: 1393665561
+      leaf and grass texture_21: -1507303431
+      leaf and grass texture_22: -1305787327
+      leaf and grass texture_23: -824239988
+      leaf and grass texture_3: -1022038278
+      leaf and grass texture_4: -1941314707
+      leaf and grass texture_5: 568532228
+      leaf and grass texture_6: -1541787253
+      leaf and grass texture_7: -659048471
+      leaf and grass texture_8: 592382676
+      leaf and grass texture_9: -1544143676
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
